@@ -135,7 +135,8 @@ export class ArbolesComponent {
       let comment = this.form.value.textarea;
       const item = {id:idArb,comm:comment};
       this.p.postComentar(item).subscribe((res)=>{
-        console.log(res);
+        alert('Comentario enviado!!');
+        this.form.get('textarea')?.reset();
       });
     }
   }

@@ -1,8 +1,8 @@
 ##Prueba Tecnica para Roket realizada por Max Jeldres
 ``
- Comandos a ejecutar 
-  npm run i-dep
-   npm start
+ Comandos a ejecutar \
+  npm run i-dep \
+ npm start
 ``
 ```
  PT_SPA_THREE

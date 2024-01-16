@@ -1,4 +1,4 @@
-##Prueba Tecnica para rocket realizada por Max Jeldres
+##Prueba Tecnica para Roket realizada por Max Jeldres
 ``
  Comandos a ejecutar 
   npm run i-dep

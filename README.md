@@ -1,7 +1,7 @@
 ##Prueba Tecnica para Roket realizada por Max Jeldres
 ``
- Comandos a ejecutar \
-  npm run i-dep \
+ Comandos a ejecutar \  
+  npm run i-dep \  
  npm start
 ``
 ```

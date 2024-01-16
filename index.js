@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
 const arbolesController = require('./controllers/arboles.js');
+const postSend = require('./controllers/post.js');
 app.use(cors(
     {
         origin: '*'
@@ -53,6 +54,28 @@ app.get('/api/arboles', async (req, res) => {
       res.status(500).json({ error: 'Error al obtener id Ubicación' });
     }
   });  
+
+  app.post('/api/comentar/',async(req,res)=>{
+    try{
+      let id = req.body.id;
+      let com = req.body.comm;
+      const respuesta = await postSend.comentar(id,com);
+      res.json(respuesta);
+    }
+    catch(error) {
+      res.status(500).json({ error: 'Error al insertar comentario' });
+    }
+  });
+
+  app.post('/api/InsertUser/',async(req,res)=>{
+    try{
+      const respuesta = await postSend.Iusert();
+      res.json(respuesta);
+    }
+    catch(error) {
+      res.status(500).json({ error: 'Error al insertar comentario' });
+    }
+  });
   
 
 app.listen(port, () => {

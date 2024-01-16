@@ -44,5 +44,6 @@ Thumbs.db
 #quitar los node y package del entorno local
 node_modules/
 package-lock.json
+angular/
 
 

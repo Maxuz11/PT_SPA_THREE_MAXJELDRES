@@ -1,0 +1,38 @@
+<main>
+  <form [formGroup]="form" (submit)="enviar()">
+  <div class="container">
+    <div class="title">Arboles ROCKET</div>
+    <div class="selector">
+      <div><label class="lbl_">Seleccione Árbol</label></div>
+      <div><select id="arbolSelect_" formControlName="ArbolSelect_" (change)="cambiarArbol($event)">
+        <option *ngFor="let list of listaArboles" value="{{list.arbol_id}}">{{list.nombre_arbol}}</option>
+      </select></div>
+    </div>
+    <div class="contenedor_img">
+      <div class="carousel">
+        <input type="hidden" id="arbId1_ " value="">
+        <img src="{{imgArbol}}" alt="altImg_"/>
+      </div>
+      <div class="example-button-row" *ngIf="listImg.length !== 1">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button type="button" mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="prevImg()">
+              <mat-icon>skip_previous</mat-icon>
+            </button>
+            <button type="button" mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="nextImg()">
+              <mat-icon>skip_next</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containerMaps" style="width: 70%;    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;">
+  </div>
+  <div class="comentario">
+    <div><textarea id="txtarea_" formControlName="textarea" placeholder="Escribe tu comentario!!"></textarea></div>
+    <div><button type="submit" id="btnsend_">SEND</button></div>
+  </div>
+</form>
+</main>
+<app-footer></app-footer>

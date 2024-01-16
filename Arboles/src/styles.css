@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #E7ECEF;
+}
+
+main {
+  min-height: 100%;
+  padding-bottom: 50px;
+  background-color: #E7ECEF;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  color: whitesmoke;
+  font-size: large;
+  background-color: #274C77;
+  text-align: center;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

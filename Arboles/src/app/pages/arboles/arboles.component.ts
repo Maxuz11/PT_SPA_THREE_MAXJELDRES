@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatDialog   } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { PostService } from '../../service/post.service';
 
 @Component({
   selector: 'app-arboles',
@@ -24,7 +25,7 @@ export class ArbolesComponent {
   cantImg : number = 0;
   form :FormGroup;
   constructor(private get:GetServiceService,private map : GoogleService,public dialog: MatDialog
-    ,private fb:FormBuilder){
+    ,private fb:FormBuilder, private p:PostService){
 
       //validamos los cambios sufridos en el formulario
     this.form = this.fb.group({
@@ -132,8 +133,10 @@ export class ArbolesComponent {
     else{
       let idArb = this.form.value.ArbolSelect_;
       let comment = this.form.value.textarea;
-      const item = {id:idArb,comm:comment}
-      console.log('hola',item)
+      const item = {id:idArb,comm:comment};
+      this.p.postComentar(item).subscribe((res)=>{
+        console.log(res);
+      });
     }
   }
 

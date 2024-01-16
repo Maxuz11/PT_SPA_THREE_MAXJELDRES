@@ -59,6 +59,7 @@ app.get('/api/arboles', async (req, res) => {
     try{
       let id = req.body.id;
       let com = req.body.comm;
+      //console.log('que llega id '+id+' com '+com);
       const respuesta = await postSend.comentar(id,com);
       res.json(respuesta);
     }

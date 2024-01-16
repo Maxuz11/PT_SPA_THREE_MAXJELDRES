@@ -100,8 +100,8 @@ button:hover{
   opacity: 0.7;
 }
 
-.carousel img.active {
-  opacity: 1;
+.carousel img:hover {
+  filter: saturate(180%)
 }
 
 .example-button-container{

@@ -1,7 +1,9 @@
 ##Prueba Tecnica para rocket realizada por Max Jeldres
-Comandos a ejecutar 
- npm i
- npm start
+``
+ Comandos a ejecutar 
+  npm run i-dep
+   npm start
+``
 ```
  PT_SPA_THREE
    ├─ Arboles

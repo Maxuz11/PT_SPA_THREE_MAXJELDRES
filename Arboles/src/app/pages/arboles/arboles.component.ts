@@ -103,7 +103,7 @@ export class ArbolesComponent {
         if(res !== undefined){
           this.ObtenerCoordenadas(res[0].ubicacion_id).then((res)=>{
             //cerramos el dialog si llega una respuesta
-            setTimeout(()=>{this.dialog.closeAll()},1000);
+            setTimeout(()=>{this.dialog.closeAll()},1500);
           });
         }
       });
